@@ -25,10 +25,40 @@ class MyHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-      title: Text('Torisum App',
-      style:TextStyle(color:Colors.white),),
-      backgroundColor: Colors.green,
-      centerTitle: true,
-    ));
+          title: Text(
+            'Torisum Application ',
+            style: TextStyle(color: Colors.white),
+          ),
+          backgroundColor: Colors.green,
+          centerTitle: true,
+        ),
+        body: Column(
+          children: [
+            Container(
+                padding: EdgeInsets.all(20),
+                color: Colors.green,
+                child: Image(
+                  image: AssetImage('images/Salalah1.jpg'),
+                )),
+            Row(
+              children: [
+                Expanded(
+                    child: SizedBox(
+                      width: 200,
+                      child: Image(
+                       image: AssetImage('images/Salalah2.jpg'),
+                    ),
+                    )),
+                Expanded(
+                    child: SizedBox(
+                      width: 200,
+                      child: Image(
+                     image: AssetImage('images/Salalah3.jpg'),
+                    ),
+                    )),
+              ],
+            ),
+          ],
+        ));
   }
 }
